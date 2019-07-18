@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Circus-Connect{% endblock %}
+
+{% block stylesheet %}
+    {{ encore_entry_link_tags('index') }}
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-4" xmlns:height="http://www.w3.org/1999/xhtml" xmlns:height="http://www.w3.org/1999/xhtml">
+        <div class="jumbotron mb-5">
+            <h1 class="display-3 text-danger">Circus Connect!</h1>
+            <p class="lead text-warning">La plateforme de mise en relation des clowns et des cirques!</p>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-6">
+                    <p>Si vous voulez en savoir plus sur nos différents cirque partenaires c'est ici :</p>
+                    <p class="lead">
+                        <a class="btn btn-warning btn-lg" href="{{ path('circus_index') }}" role="button">Cirque partenaires</a>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <p>Si vous voulez en savoir plus sur nos différents clowns partenaires c'est ici :</p>
+                    <p class="lead">
+                        <a class="btn btn-danger btn-lg" href="{{ path('clown') }}" role="button">Clowns partenaires</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-center mb-4">
+           <h2 class="text-success"> Nos plus belles rencontres!</h2>
+        </div>
+        <div class="row" >
+            <img style="height: 20em; width: 20em; display: block; margin-right: 3em;" src="https://image.noelshack.com/fichiers/2019/29/4/1563482978-quelcirque.jpg" alt="quel-cirque">
+            <img style="height: 20em; width: 20em; display: block;margin-right: 3em" src="https://image.noelshack.com/fichiers/2019/29/4/1563483202-elephant.jpg" alt="quel-cirque">
+            <img style="height: 20em; width: 20em; display: block;margin-right: 3em" src="https://image.noelshack.com/fichiers/2019/29/4/1563483255-cirque.jpg" alt="quel-cirque">
+        </div>
+    </div>
+{% endblock %}

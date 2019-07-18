@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Circus{% endblock %}
+
+{% block stylesheet %}
+    {{ encore_entry_link_tags('circus') }}
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+      <h1 class="my-4"> Voici nos Cirques partenaires !</h1>
+      <div class="row">
+          {% for circus in circuses%}
+              {% set url = path('circus_show', {'slug' : circus.slug}) %}
+            <div class="col-md-4">
+                <div class="card bg-light mb-3">
+                    <div class="card-header text-center">
+                            Le cirque <strong> {{ circus.name }} </strong>
+                    </div>
+
+                    <a href="{{ url }}">
+                    <img src="{{ circus.image }}" alt="image de cirque"
+                         style="height: 200px; width: 100%; display: block;">
+                    </a>
+
+                    <div class="card-body">
+                        <h4 class="card-title">{{ circus.ville }}</h4>
+                    </div>
+                    <p class="card-text">
+                        {{ circus.description }}
+                    </p>
+                    <a href="{{ url }}" class="btn btn-secondary"> En savoir plus</a>
+
+                </div>
+            </div>
+          {% endfor %}
+      </div>
+  </div>
+{% endblock %}

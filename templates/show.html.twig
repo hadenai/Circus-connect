@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Circus {% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-8">
+                <img src="{{ circus.image }}" alt="image de cirque"
+                     style="height: 80%; width: 80%; display: block;">
+            </div>
+            <div class="col-md-4">
+                <h2>{{ circus.name }}</h2>
+                <p>{{ circus.ville }}</p>
+                <p>{{ circus.description }}</p>
+                <a href="" class="btn btn-success mb-4 ">Réserver !</a>
+            </div>
+        </div>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi,
+            asperiores assumenda blanditiis consequatur consequuntur cupiditate dignissimos
+            dolore dolores est excepturi expedita explicabo facere fugiat fugit iure laborum
+            magni minima modi, molestiae, nobis omnis placeat porro reiciendis repellendus reprehenderit tempore!</p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi,
+            asperiores assumenda blanditiis consequatur consequuntur cupiditate dignissimos
+            dolore dolores est excepturi expedita explicabo facere fugiat fugit iure laborum
+            magni minima modi, molestiae, nobis omnis placeat porro reiciendis repellendus reprehenderit tempore!</p>
+
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi,
+            asperiores assumenda blanditiis consequatur consequuntur cupiditate dignissimos
+            dolore dolores est excepturi expedita explicabo facere fugiat fugit iure laborum
+            magni minima modi, molestiae, nobis omnis placeat porro reiciendis repellendus reprehenderit tempore!</p>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Clown{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1 class="my-4"> Voici nos Clowns partenaires !</h1>
+        <div class="row">
+            {% for clown in clowns%}
+                <div class="col-md-4">
+                    <div class="card bg-light mb-3">
+                        <div class="card-header text-center">
+                             <strong> {{ clown.firstName  }} {{  clown.lastName }}</strong>
+                        </div>
+
+                            <img src="{{ clown.image }}" alt="image de clown"
+                                 style="height: 200px; width: 100%; display: block;">
+
+                        <div class="card-body">
+                          <h4 class="card-title"> Ville: {{ clown.ville }}</h4>
+                            <h4 class="card-title"> Spécialité: {{ clown.category.title }}</h4>
+                        </div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

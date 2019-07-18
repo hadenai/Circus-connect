@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} Registration {% endblock %}
+
+{% block body %}
+
+    <div class="mt-3">
+    <h1 > inscription sur le site</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col_8">
+                <div class="bg-light py-3 px-3">
+
+                    {{ form_start(form) }}
+
+                    {{ form_row(form.firstName, {'label': 'Prénom', 'attr' :{'placeholder':"Entrez votre Prénom... " }}) }}
+                    {{ form_row(form.lastName, {'label': 'nom', 'attr' :{'placeholder':"Entrez votre Nom... " }}) }}
+                    {{ form_row(form.ville, {'label': 'ville', 'attr' :{'placeholder':"Entrez votre ville... " }}) }}
+                    {{ form_row(form.category, {'label': 'spécialité', 'attr' :{'placeholder':"Entrez votre Spécialité... " }}) }}
+                    {{ form_row(form.email, {'label': 'Adresse email','attr' :{'placeholder':"Entrez votre email..." }}) }}
+                    {{ form_row(form.password, {'label': 'Mot de passe (minimun 8 caractères)','attr' :{'placeholder':"Entrez votre mot de passe" }}) }}
+
+                    <button type="submit" class="btn btn-success">Inscription ! </button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
